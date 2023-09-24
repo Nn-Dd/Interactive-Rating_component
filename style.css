@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #141519;
+  color: #fcffff;
+  line-height: 1.6;
+}
+
+.submitted-card,
+.card-initial {
+  background-color: #1e252f;
+}
+.submitted-card {
+  display: none;
+}
+
+.card-initial {
+  display: flex;
+  flex-direction: column;
+
+  padding: 6%;
+  border-radius: 16px;
+  row-gap: 25px;
+  max-width: 22vw;
+  margin-bottom: 20px;
+}
+
+.icon {
+  border-radius: 50px;
+  background-color: #272e38;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rating-circles {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.circle {
+  cursor: pointer;
+  font-family: Overpass;
+  font-size: 16px;
+  color: #767e8a;
+  background-color: #262f36;
+  border-radius: 50px;
+  border: none;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.text p {
+  color: #868d97;
+}
+.submit-button {
+  cursor: pointer;
+  background-image: linear-gradient(
+    to right,
+    #fc7613,
+    #fc7613,
+    #ffffff,
+    #ffffff
+  );
+  color: #fffaea;
+  border-radius: 20px;
+  border: none;
+  font-family: Overpass;
+  font-size: 20px;
+  padding: 10px 0px 10px 0px;
+  background-size: 300% 100%;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.submit-button:hover {
+  background-position: 100% 0;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  color: #e77a28;
+}
+
+.circle:hover,
+.circle:focus {
+  background-color: #fc7613;
+  color: #fff;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.circle:focus + .circle,
+.circle:has(+ .circle:focus) {
+  background-color: #7d8798;
+  color: #fff;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
