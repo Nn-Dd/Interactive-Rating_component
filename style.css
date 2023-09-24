@@ -1,122 +1,154 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
-
 * {
   margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: "Overpass", sans-serif;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  justify-content: center;
-  align-items: center;
   background-color: #141519;
-  color: #fcffff;
-  line-height: 1.6;
-}
-
-.submitted-card,
-.card-initial {
-  background-color: #1e252f;
-}
-.submitted-card {
-  display: none;
-}
-
-.card-initial {
+  font-size: 15px;
+  font-family: "Overpass", sans-serif;
+  min-height: 100vh;
+  margin: 1.5rem;
   display: flex;
   flex-direction: column;
-
-  padding: 6%;
-  border-radius: 16px;
-  row-gap: 25px;
-  max-width: 22vw;
-  margin-bottom: 20px;
-}
-
-.icon {
-  border-radius: 50px;
-  background-color: #272e38;
-  height: 40px;
-  width: 40px;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
-.rating-circles {
+ul {
+  list-style-type: none;
+}
+button {
+  font-family: inherit;
+}
+
+.card-initial,
+.submitted-card {
+  max-width: 400px;
+  background: #1f2630;
+  padding: 1.5rem;
+  border-radius: 0.625rem;
+}
+
+.card-initial img {
+  background-color: #262f38;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+.card-initial .text h1 {
+  color: #fff;
+  margin: 2rem 0 1rem;
+}
+.card-initial .text p {
+  color: hsl(216, 12%, 54%);
+  margin-bottom: 2rem;
+}
+.card-initial ul {
+  margin-bottom: 2rem;
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
-  gap: 15px;
-  cursor: pointer;
-  font-weight: bold;
 }
-.circle {
-  cursor: pointer;
-  font-family: Overpass;
-  font-size: 16px;
-  color: #767e8a;
-  background-color: #262f36;
-  border-radius: 50px;
+.card-initial ul li button {
+  width: 3rem;
+  height: 3rem;
+  font-family: "Overpass";
   border: none;
-  height: 50px;
-  width: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border-radius: 50%;
+  background-color: #262f38;
+  color: hsl(216, 12%, 54%);
+  padding-top: 0.2rem;
+  cursor: pointer;
   -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-.text p {
-  color: #868d97;
+.card-initial ul li button:hover {
+  background-color: hsl(25, 97%, 53%);
+  color: #fff;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
-.submit-button {
-  cursor: pointer;
+
+.card-initial ul li button:focus {
+  background-color: hsl(217, 12%, 63%);
+  color: #fff;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.btn {
+  width: 100%;
+  font-family: "Overpass";
+  word-spacing: 3%;
+  background-color: hsl(25, 97%, 53%);
   background-image: linear-gradient(
     to right,
-    #fc7613,
-    #fc7613,
-    #ffffff,
-    #ffffff
+    hsl(25, 97%, 53%),
+    hsl(25, 97%, 53%),
+    hsl(0, 0%, 100%),
+    hsl(0, 0%, 100%)
   );
-  color: #fffaea;
-  border-radius: 20px;
-  border: none;
-  font-family: Overpass;
-  font-size: 20px;
-  padding: 10px 0px 10px 0px;
   background-size: 300% 100%;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  padding: 1rem 0 0.9rem;
+  border-radius: 20px;
   -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-.submit-button:hover {
+.btn:hover {
+  color: hsl(25, 97%, 53%);
   background-position: 100% 0;
   -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-  color: #e77a28;
+}
+.submitted-card img {
+  display: block;
+  margin: 0 auto 2rem;
+}
+.submitted-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.submitted-card .selected-rating-text .selected-text {
+  background-color: #262f38;
+  color: hsl(25, 97%, 53%);
+  border-radius: 20px;
+  padding: 0.2rem 0.5rem 0;
+  margin-bottom: 2rem;
+}
+.submitted-card .selected-rating-text {
+  margin-bottom: 2rem;
+}
+.submitted-card .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.submitted-card .text h1 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.submitted-card .text p {
+  color: hsl(216, 12%, 54%);
+  margin-bottom: 2rem;
 }
 
-.circle:hover,
-.circle:focus {
-  background-color: #fc7613;
-  color: #fff;
-  -moz-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-.circle:focus + .circle,
-.circle:has(+ .circle:focus) {
-  background-color: #7d8798;
-  color: #fff;
-  -moz-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+.hidden{
+  display: none;
 }

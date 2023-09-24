@@ -11,14 +11,16 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
+    <script src="script.js" defer></script>
     <title>Frontend Mentor | Interactive rating component</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
-        font-size: 11px;
+        font-size: 14px;
         text-align: center;
+        color: #fff;
+        margin-top: 2rem;
       }
       .attribution a {
         color: hsl(228, 45%, 44%);
@@ -28,14 +30,8 @@
   <body>
     <main>
       <div class="card-initial">
-        <div class="icon">
-          <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="m9.067.43 1.99 4.031c.112.228.33.386.58.422l4.45.647a.772.772 0 0 1 .427 1.316l-3.22 3.138a.773.773 0 0 0-.222.683l.76 4.431a.772.772 0 0 1-1.12.813l-3.98-2.092a.773.773 0 0 0-.718 0l-3.98 2.092a.772.772 0 0 1-1.119-.813l.76-4.431a.77.77 0 0 0-.222-.683L.233 6.846A.772.772 0 0 1 .661 5.53l4.449-.647a.772.772 0 0 0 .58-.422L7.68.43a.774.774 0 0 1 1.387 0Z"
-              fill="#FC7614"
-            />
-          </svg>
-        </div>
+        <img src="./images/icon-star.svg" />
+
         <div class="text">
           <h1>How did we do?</h1>
           <p>
@@ -43,26 +39,24 @@
             feedback is appreciated to help us improve our offering!
           </p>
         </div>
-        <div class="rating-circles">
-          <button class="circle" id="circle1" type="button">1</button>
 
-          <button class="circle" id="circle2" type="button">2</button>
+        <ul>
+          <li><button class="rating-buttons">1</button></li>
+          <li><button class="rating-buttons">2</button></li>
+          <li><button class="rating-buttons">3</button></li>
+          <li><button class="rating-buttons">4</button></li>
+          <li><button class="rating-buttons">5</button></li>
+        </ul>
 
-          <button class="circle" id="circle3"type="button">3</button>
-
-          <button class="circle" id="circle4"type="button">4</button>
-
-          <button class="circle" id="circle5"type="button">5</button>
-        </div>
-        <button type="submit" class="submit-button">SUBMIT</button>
+        <button type="button" class="btn" id="submit-btn">SUBMIT</button>
       </div>
 
-      <div class="submitted-card">
+      <div class="submitted-card hidden">
         <picture>
           <img src="./images/illustration-thank-you.svg" alt="phone" />
         </picture>
         <div class="selected-rating-text">
-          <span>You selected <span id="selected-rating"></span></span>
+          <span class="selected-text">You selected <span id="selected-rating"> 0 </span> out of 5</span>
         </div>
         <div class="text">
           <h1>Thank you!</h1>
@@ -71,6 +65,7 @@
             more support, don’t hesitate to get in touch!
           </p>
         </div>
+        <button type="button" class="btn" id="rate-again-btn">Rate Again!</button>
       </div>
     </main>
 
@@ -80,6 +75,5 @@
         >Frontend Mentor</a
       >. Coded by <a href="https://github.com/Nn-Dd">NnDd</a>.
     </div>
-    <script src="script.js"></script>
   </body>
 </html>
