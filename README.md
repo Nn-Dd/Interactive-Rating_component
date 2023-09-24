@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Nn-Dd/Interactive-Rating_component)
-- Live Site URL: [Add live site URL here](https://nn-dd.github.io/Interactive-Rating_component/)
+- Solution URL: [Solution URL](https://github.com/Nn-Dd/Interactive-Rating_component)
+- Live Site URL: [Live Site URL](https://nn-dd.github.io/Interactive-Rating_component/)
 
 ## My process
 
@@ -57,5 +57,5 @@ const proudOfThisFunc = () => {
 
 ## Author
 
-- Website - [Add your name here](https://github.com/Nn-Dd)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/Nn-Dd)
+- GitHub profile - [Andy Jimenez | NnDd](https://github.com/Nn-Dd)
+- Frontend Mentor - [@NnDD](https://www.frontendmentor.io/profile/Nn-Dd)
