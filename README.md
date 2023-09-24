@@ -28,7 +28,7 @@ Users should be able to:
 ### Screenshot
 
 ![](./screenshot/desktop.png)
-![](./screenshot/focus&hover%20btn.png.png)
+![](./screenshot/focus&hover.png)
 ![](./screenshot/second-card.png)
 
 ### Links
